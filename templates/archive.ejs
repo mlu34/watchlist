@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Watch List</title>
+    <link rel="icon" type="image/x-icon" href="/movie.png">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="button-container">
+        <form action="/home" method="post" class="mukta-regular">
+            <input type="submit" value="Home" class="nav-button">
+        </form>
+        <form action="/archive" method="post" class="mukta-regular">
+            <input type="submit" value="Archive" class="nav-button">
+        </form>
+    </div>
+    <hr>
+
+    <h1 class="mukta-regular">Archive</h1>
+    <form action="/archive" method="post">
+        <div class="row">
+            <input type="search" name="search" placeholder="Search" autocomplete="off">
+            <label> 
+                <select name="sort" size="1">
+                    <option value="" hidden selected>Sort by</option>
+                    <option value="newest">Newest</option>
+                    <option value="oldest">Oldest</option>
+                    <option value="highest_rating">Rating: High</option>
+                    <option value="lowest_rating">Rating: Low</option>
+                </select>
+            </label>
+        </div>
+        <br>
+        <div class="row mukta-regular">
+            <label><input type="checkbox" name="animated"> Animated</label>
+            <label><input type="checkbox" name="documentary"> Documentary</label>
+            <label><input type="checkbox" name="movie"> Movie</label>
+            <label><input type="checkbox" name="reality"> Reality</label>
+            <label><input type="checkbox" name="series"> Series</label>
+        </div>
+        <div class="row mukta-regular">
+            <label><input type="checkbox" name="not_watched"> Not Watched</label>
+            <label><input type="checkbox" name="watching"> Watching</label>
+            <label><input type="checkbox" name="watched"> Watched</label>
+            <input type="submit">
+        </div>
+    </form>
+    <br>
+    <div class="movies"><%- html %></div>
+</body>
+
+</html>

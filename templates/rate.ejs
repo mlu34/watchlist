@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Watch List</title>
+    <link rel="icon" type="image/x-icon" href="/movie.png">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="button-container">
+        <form action="/home" method="post" class="mukta-regular">
+            <input type="submit" value="Home" class="nav-button">
+        </form>
+        <form action="/archive" method="post" class="mukta-regular">
+            <input type="submit" value="Archive" class="nav-button">
+        </form>
+    </div>
+    <hr>
+
+    <h1 class="mukta-regular"><%- title %></h1>
+    <form action="/archive/rated" method="post">
+        <input type="text" name="title" value="<%- title %>" hidden>
+        <output class="stars">&starf;&starf;&starf;&star;&star;</output>
+
+        <input type="range" name="rating" min="1" max="5" step="0.5" value="3" class="slider" oninput="this.previousElementSibling.value = '&starf;'.repeat(Math.round(this.value)) + '&star;'.repeat(5 - Math.round(this.value)); this.nextElementSibling.value = 'Rating: ' + this.value;">
+        <output class="mukta-regular">Rating: 3</output>
+        <br>
+        <div class="button-container">
+            <label class="mukta-regular">Status: 
+                <select name="watched" size="1" required>
+                    <option value="" hidden selected></option>
+                    <option value="not_watched">&#10008; Not watched</option>
+                    <option value="watching">&#9866; Watching</option>
+                    <option value="watched">&#10004; Watched</option>
+                </select>
+            </label>
+            <input type="submit">
+        </div>
+    </form>
+</body>
+
+</html>

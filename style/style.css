@@ -1,0 +1,95 @@
+body {
+    background-color: #fdfdfd;
+    color: #353535;
+
+    width: 80%;
+    margin: 0 auto;
+}
+.mukta-regular {
+    font-family: "Mukta", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+h1 {
+    text-align: center;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 80%;
+    gap: 20px;
+    margin: 0 auto;
+}
+input, select, textarea {
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    border: 0px;
+    font-family: "Mukta", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+fieldset {
+    border: 2px solid #383838;
+    border-radius: 10px;
+}
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px; 
+    margin-top: 10px;
+}
+.nav-button {
+    background-color: #fdfdfd;
+    border: none;
+    padding: 10px 20px; 
+    font-size: 16px;
+}
+.nav-button:hover {
+    background-color: #e7e7e7;
+}
+.movies {
+    width: 80%;
+    margin: 0 auto;
+}
+input[type="search"] {
+    width: 50%;
+}
+.separate {
+    display: flex;
+    justify-content: space-between;
+}
+#a-archive {
+    font-weight: bold;
+}
+#a-archive:hover {
+    color: #0066ff !important;
+    cursor: pointer;
+}
+.stars {
+    font-size: 300%;
+    color: orange;
+    margin-bottom: 10px;
+}
+input:hover, select:hover, textarea:hover {
+    background-color: #e7e7e7;
+}
+.tooltip {
+    color: orange; 
+    cursor: default;
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+input[type="range"] {
+    width: 200px;
+    margin-bottom: 10px;
+}
