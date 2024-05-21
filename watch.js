@@ -46,7 +46,7 @@ app.post("/home", async (request, response) => {
     let {title, type, description, name} = request.body;
     let date = new Date();
     if (title != null) {
-        let result = {title: title, type: type, description: description, name: name, submitted_on: date, watched: -1, rating: 0};
+        let result = {title: title, type: type, description: description, name: name, submitted_on: date, watched: -1, rating: 0, updated_on: new Date()};
         await insertData(result);
     }
     response.render("home");
